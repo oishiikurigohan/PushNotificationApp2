@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:PushNotificationApp2"
+             x:Class="PushNotificationApp2.MainPage">
+
+    <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+        <Label Text="FileName : " />
+        <Label Text="{Binding Path=FileName.Value, Mode=OneWay}">
+            <Label.BindingContext>
+                <local:ReceiveMessage />
+            </Label.BindingContext>
+        </Label>
+    </StackLayout>
+
+</ContentPage>
